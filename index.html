@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Density Lock</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="app">
+
+  <div class="header">Nguyễn Huy Make File</div>
+
+  <div class="tabs">
+    <div class="tab active" onclick="openPage(0)">Menu Nguyễn Huy</div>
+    <div class="tab" onclick="openPage(1)">LẬP TRÌNH VIÊN ĐƯỢC DẠY BỞI AZEN,QUANG HÀO ,DEV TUẤN TRUNG</div>
+    <div class="tab" onclick="openPage(2)">Khởi Chạy Menu Chức Năng</div>
+  </div>
+
+  <div class="page active">
+    <div class="box">
+      <div class="toggle">Nhạy Tâm <div class="switch" onclick="toggleSwitch(this)"></div></div>
+      <div class="toggle">Fix Rung <div class="switch" onclick="toggleSwitch(this)"></div></div>
+      <div class="toggle">Giảm Lố Đầu <div class="switch" onclick="toggleSwitch(this)"></div></div>
+      <div class="toggle">Android Ảo <div class="switch" onclick="toggleSwitch(this)"></div></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="box">
+      <label>FPS</label>
+      <input type="range" min="30" max="120" value="90"
+             oninput="fpsVal.innerText=this.value">
+      <div class="value"><span id="fpsVal">60</span> FPS</div>
+
+      <label>Độ Nhạy</label>
+      <input type="range" min="0" max="260" value="150"
+             oninput="senVal.innerText=this.value">
+      <div class="value"><span id="senVal">130</span></div>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="box">
+      <div class="ff-main" onclick="ffMenu.style.display='block'">
+        🎮 FREE FIRE<br>
+        <span id="ffStatus">Chưa chọn chế độ</span>
+      </div>
+
+      <div id="ffMenu" style="display:none">
+        <div class="ff-option" onclick="selectFF('Free Fire Thường')">
+          🔥 Free Fire Thường
+        </div>
+        <div class="ff-option" onclick="selectFF('Free Fire Chuyên Nghiệp')">
+          💀 Free Fire Max
+        </div>
+      </div>
+    </div>
+
+    <button class="start" onclick="start()">START</button>
+  </div>
+
+  <div class="footer">
+    Infinity Optimizers<br>@Nguyenhuymakefile
+  </div>
+
+</div>
+
+<audio id="click" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
